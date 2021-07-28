@@ -83,8 +83,8 @@ def get_stat():
     name, value = zip(*sorted(count_tasks.items(), key=lambda item: item[1]))
 
     # find group of accessor with small count of tasks
-    plt.scatter(value, value)
-    plt.show()
+    # plt.scatter(value, value)
+    # plt.show()
     min_count_of_tasks = 300
     list_of_bad_accessor = set()
     for i in range(len(name)):

@@ -13,7 +13,7 @@ def get_stat():
     free_times = []
     is_column_names = True
     with open(path_to_file, mode='r') as file:
-        for i, line in file:
+        for line in file:
             if not is_column_names:
                 login, _, subtasks, date_assign, time_assign, date_end, time_end = line.split()
                 # collect statistics for each user
