@@ -84,7 +84,8 @@ def get_stat():
 
     # find group of accessor with small count of tasks
     # plt.scatter(value, value)
-    # plt.show()
+    # plt.savefig("img1.png")
+
     min_count_of_tasks = 300
     list_of_bad_accessor = set()
     for i in range(len(name)):
@@ -106,8 +107,8 @@ def get_stat():
     graduated_tasks = list(map(get_result, (p / q for p, q in zip(correct, sum_of_task_by_type))))
 
     # find group with the worst kpi. Find answer at graphic
-    # plt.scatter(result, result)
-    # plt.show()
+    plt.scatter(graduated_tasks, graduated_tasks)
+    plt.savefig("img2.png")
     max_worst_kpi = 3.5
 
     result_dict = dict(zip(accessor_login, graduated_tasks))
